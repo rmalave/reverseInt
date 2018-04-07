@@ -1,5 +1,10 @@
-function reverse(int) {
+module.exports = reverse = (int) => {
   let result = 0;
+
+  if (int < 0) {
+    console.log('Negative numbers not supported');
+    return;
+  }
 
   while(int !== 0) {
     result = result * 10 + int % 10;
